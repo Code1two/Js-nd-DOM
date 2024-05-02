@@ -1,0 +1,25 @@
+.rodyti, .maisyti {
+    margin: 0 auto;
+    width: 150px;
+    height: 90px;
+    background-color: yellow;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 0% 50%;
+    border: 5px double burlywood;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.grid li {
+    list-style-type: none;
+}
+
+.grid img {
+    width: 100%;
+    height: 200px;
+}
