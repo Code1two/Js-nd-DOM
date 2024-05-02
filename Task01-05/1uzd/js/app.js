@@ -9,16 +9,19 @@ document.querySelector('#tableForm').addEventListener('submit',(e) =>{
         let rows = parseInt(document.querySelector("#rows").value);
         let columns = parseInt(document.querySelector("#columns").value);
 
-        let tableHTML = "<table border='1'>";
-
+        let table = document.createElement("table");
+        table.setAttribute('border', '1');
         for (let i = 0; i < rows; i++) {
-            tableHTML += "<tr>";
+                let row = document.createElement('tr');
             for (let j = 0; j < columns; j++) {
-                tableHTML += "<td> " + (i + 1) + ",  " + (j + 1) + "</td>";
+                let cell = document.createElement('td');
+                cell.textContent = (i + 1) + ",  " + (j + 1);
+                row.appendChild(cell)
             }
-            tableHTML += "</tr>";
+            table.appendChild(row);
         }
-        tableHTML += "</table>";
+        
 
-        document.querySelector("section").innerHTML = tableHTML;
+        document.querySelector("section").innerHTML = '';
+        document.querySelector('section').appendChild(table);
     });
