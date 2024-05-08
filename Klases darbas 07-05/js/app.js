@@ -29,8 +29,11 @@ function reverseString(str) {
 console.log(reverseString('Hello')); // Output: "olleH"
 
 /*4.Write a function titleCase that converts a sentence to title case (the first letter of each word capitalized).*/
-function titleCase(str){
-    const array = str.split('');
+function titleCase(sentence) {
+  return sentence
+    .split(' ')
+    .map(word => word.replace(word[0], word[0].toUpperCase()))
+    .join(' ');
 }
 
 
